@@ -66,7 +66,7 @@ a {
 }
 
 a:hover{
-    color: gold;
+    color: blue;
 }
 
 .row {
@@ -227,6 +227,10 @@ table thead {
     width: 30px;
 }
 
+.ping{
+    max-width: 10%;
+}
+
 /*-------------not found screen-------------*/
 .row img{
     width: 20%;
@@ -267,7 +271,7 @@ p3{
 }
 
 /*=========== media query for menu  ================*/
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1070px){
     .row{
         overflow: auto;
     }
