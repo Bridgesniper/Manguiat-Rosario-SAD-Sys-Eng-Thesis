@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request | Kompyut.ph</title>
+    <title><%= pageTitle %></title>
     <link rel="stylesheet" href="design.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -33,27 +33,46 @@
     <div class="search_field">
         <div class="small_container">
             <div class="row">
-                <img class="ping" src="komyut_images/blue-worker-md.png">
+                <h1>Komyut.ph<br></h1>
+            </div>
+            <div class="row">
+                <p>Your Commuting Partner in the Philippines</p>
+            </div>
+            <div class="row">
+                <div class="column_left">
+                    <p>
+                        From
+                    </p>
+                </div>
+
+                <div class="column">
+                    <input type="text" placeholder="Enter starting point" />
+                </div>
             </div>
 
             <div class="row">
-                <h3>
-                    Thanks for the ping!<br />
-                    We'll go ahead and look into it
-                </h3>
+                <div class="column_left">
+                    <p>
+                        To
+                    </p>
+                </div>
+
+                <div class="column">
+                    <input type="text" placeholder="Enter destination" />
+                </div>
             </div>
 
             <div class="row">
-                <p3>
-                    Our team will now look into this route and will update<br />
-                    our results once we confirmed this route's existence.<br />
-                    <a href="komyut_search.html">Click here</a> to search for other commuting routes.<br />
-                    <a href="komyut_suggest.html">Click here</a> to suggest an existing route.
-                </p3>
+                <div class="column2">
+                    <input type="checkbox" id="discount" name="disc" value="Discount" />
+                    <label for="disc">Check if Senior/Student</label>
+                </div>
+                <div class="column2_right">
+                    <button>SEARCH</button>
+                </div>
             </div>
         </div>
     </div>
-
 
 
     <!---------------------footer--------------------------->
