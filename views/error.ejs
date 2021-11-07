@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An error occured</title>
+    <link rel="stylesheet" href="design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <%- include('./layout/partials/banner') %>
+
+    <div class="search_field">
+        <div class="small-container">
+            <div class="row">
+                <h1><%=status%></h1>
+            </div>
+            <div class="row">
+                <h2><%=message%></h2>
+            </div>
+        </div>
+    </div>
+
+    <%- include('./layout/partials/footer') %>
+
+    <%- include('./layout/partials/script') %>
+</body>
+</html>

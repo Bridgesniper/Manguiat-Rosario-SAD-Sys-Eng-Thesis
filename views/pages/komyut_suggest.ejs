@@ -1,0 +1,76 @@
+﻿
+<div class="search_field">
+    <div class="small_container">
+        <div class="row">
+            <h1>Suggest a Route<br /></h1>
+            <p2>
+                In this page, you can suggest a route by filling up the necessary information on the form below,<br />
+                or you can upload a video of the route you want to suggest by clicking on the Upload Video button.
+            </p2>
+        </div>
+
+        <% if(locals.errors){%>
+        <div class="row">
+            <div class="alert">
+                <ul>
+                    <%errors.forEach(function(error){%>
+                    <li><%= error.msg %></li>
+                    <%})%>
+                </ul>
+            </div>
+        </div>
+        <%} else if(locals.successMessage){%>
+        <div class="row">
+            <div class="success">
+                <%= successMessage %>
+            </div>
+        </div>
+        <%}%>
+
+        <form method="POST" action="/suggest">
+            <div class="row" id="tabRow">
+                <table id="routeTable" name="route">
+                    <thead>
+                        <tr>
+                            <th>Starting Point</th>
+                            <th>Vehicle (Including Route)</th>
+                            <th>Stopping Point</th>
+                            <th>Cost</th>
+                            <th>Average travel Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="col0"><input type="text" name="start" /></td>
+                            <td id="col1"><input type="text" name="vehicle" /></td>
+                            <td id="col2"><input type="text" name="end" /></td>
+                            <td id="col3"><input type="text" name="cost" /></td>
+                            <td id="col4"><input type="text" name="ave_time" /></td>
+                            <td id="col5" style="white-space: nowrap"><button type="button" onclick="addRows()" />+<button type="button" onclick="deleteRows()" />-</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row">
+                <div class="spec_row" id="videoUpload">
+                    <input name="video" type="text" placeholder="Enter file Location" />
+                    <button type="button" name="browse">Browse</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column3">
+                    <button type="submit">Submit</button>
+                </div>
+                <div class="column2_right">
+                    <button type="button" id="suggest" onclick="changeMode()">Upload a Video</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+
+
+    <%- include('./partials/script') %>
